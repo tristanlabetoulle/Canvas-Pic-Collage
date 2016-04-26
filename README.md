@@ -1,2 +1,2 @@
-# Canvas-Pic-Collage-2
+# Canvas-Pic-Collage
 test internship
