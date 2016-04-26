@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<canvas id="piccollage" width="400" height="300">
+</canvas>
+
+<script>
+var canvas = document.getElementById("piccollage");
+var context = canvas.getContext("2d");
+context.font = "bold 60px gabriola";
+context.fillStyle='rgb(0,100,0)';
+context.fillText("PicCollage",100,100);
+</script>
+
+</body>
+</html>
