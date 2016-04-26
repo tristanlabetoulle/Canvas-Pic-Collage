@@ -3,8 +3,13 @@
 
 <body>
 
-<canvas id="piccollage" width="400" height="400">
+<canvas id="piccollage" width="400" height="300">
 </canvas>
+
+<video hidden id="v" controls >
+  <source src="smiley.avi" type="video/avi">
+  <source src="smiley.mp4" type="video/mp4">
+</video>  
 
 <script>
 var canvas = document.getElementById("piccollage");
@@ -14,7 +19,8 @@ context.font = "bold 60px gabriola";
 canvas.addEventListener('click', emergence,false);
 function emergence(){
 	var i = 256;
-	var inter = setInterval(function(){context.clearRect(0,0,canvas.width, canvas.height); context.fillStyle='rgb('+i+','+i+','+i+')'; context.fillText("Pic Collage",100,100); i=i-1; if(i==0){clearInterval(inter);}},5);
+	var inter = setInterval(function(){context.clearRect(0,0,canvas.width, canvas.height); context.fillStyle='rgb('+i+','+i+','+i+')';context.drawImage(v,0,0,canvas.width,canvas.height); context.fillText("Pic Collage",100,100); i=i-1; if(i==0){clearInterval(inter);}},5);
+	v.play();
 }
 
 </script>
